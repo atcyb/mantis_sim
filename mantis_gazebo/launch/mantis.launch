@@ -1,0 +1,16 @@
+<launch>
+    <arg name="model" default="mantis" doc="model type [mantis, mantis]"/>
+
+    <arg name="rvizconfig" default="$(find mantis_control)/rviz/mantis.rviz" />
+    <arg name="world_name" default="$(find mantis_gazebo)/worlds/db_world.world"/>
+
+    <include file="$(find mantis_gazebo)/launch/mantis_view.launch">
+        <arg name="model" value="$(arg model)" />
+        <arg name="world_name" value="$(arg world_name)"/>
+    </include>
+
+    <include file="$(find mantis_control)/launch/mantis_control.launch">
+        <arg name="model" value="$(arg model)" />
+    </include>
+
+</launch>

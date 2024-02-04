@@ -1,0 +1,15 @@
+<launch>
+
+    <node name="list_controllers" pkg="rosservice" type="rosservice"  
+        args="call --wait /mantis/controller_manager/list_controllers" output="screen" />
+  <!-- Load controllers -->
+    <node name="load_joint_state_controller" pkg="rosservice" type="rosservice" output="screen"
+        args="call --wait /mantis/controller_manager/load_controller &quot;name: 'joint_state_controller'&quot;" />
+    <node pkg="rosservice" type="rosservice" name="load_mobile_base_controller" output="screen"
+        args="call --wait /mantis/controller_manager/load_controller &quot;name: 'mobile_base_controller'&quot;" />
+    
+    <!-- Start controllers -->
+    <node name="start_controllers" pkg="rosservice" type="rosservice" output="screen"
+        args="call --wait /mantis/controller_manager/switch_controller &quot;start_controllers: ['joint_state_controller', 'mobile_base_controller']&quot;" />
+
+</launch>

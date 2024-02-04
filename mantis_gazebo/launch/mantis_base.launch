@@ -1,0 +1,14 @@
+<launch>
+
+    <arg name="model" default="mantis" doc="model type [mantis, mantis]"/>
+
+    <include file="$(find mantis_gazebo)/launch/mantis.launch">
+        <arg name="model" value="$(arg model)" />
+    </include>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        ns="mantis" respawn="false" output="screen">
+        <remap from="/joint_states" to="/mantis/joint_states" />
+    </node>
+    <include file="$(find mantis_base)/launch/controllers.launch">    </include>
+
+</launch>

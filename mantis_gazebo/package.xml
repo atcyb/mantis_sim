@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mantis_gazebo</name>
+  <version>1.1.0</version>
+  <description>The mantis_gazebo package</description>
+
+  <maintainer email="21bme012@nith.ac.in">Aakash</maintainer>
+  <license>BSDv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>mantis_control</exec_depend>
+  <exec_depend>mantis_description</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
+  </export>
+</package>

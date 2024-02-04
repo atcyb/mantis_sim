@@ -1,0 +1,6 @@
+<launch>
+    <arg name="rvizconfig" default="$(find mantis_control)/rviz/mantis.rviz" />
+
+    <!-- Launch visualization in rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mantis_description)/urdf.rviz" required="true" />
+</launch>

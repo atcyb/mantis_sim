@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mantis_robot</name>
+  <version>1.1.0</version>
+  <description>The mantis_robot package</description>
+
+
+  <maintainer email="21bme012@nith.ac.in">Aakash</maintainer>
+  <license>BSDv3</license>
+
+  <exec_depend>mantis_base</exec_depend>
+  <exec_depend>mantis_bringup</exec_depend>
+  <exec_depend>mantis_control</exec_depend>
+  <exec_depend>mantis_description</exec_depend>
+  <exec_depend>mantis_gazebo</exec_depend>
+  <exec_depend>mantis_navigation</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

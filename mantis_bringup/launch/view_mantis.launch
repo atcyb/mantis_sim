@@ -1,0 +1,6 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="model" default="mantis" doc="model type [mantis, mantis]"/>
+    <!-- Launch visualization in rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mantis_bringup)/rviz/$(arg model)_bringup.rviz" required="true" />
+</launch>

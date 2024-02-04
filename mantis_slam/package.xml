@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mantis_slam</name>
+  <version>1.1.0</version>
+  <description>The mantis_slam package</description>
+
+
+  <maintainer email="21bme012@nith.ac.in">Aakash</maintainer>
+  <license>BSDv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>gmapping</exec_depend>
+  <!--exec_depend>hector_slam</exec_depend-->
+
+
+  <export>
+
+  </export>
+</package>

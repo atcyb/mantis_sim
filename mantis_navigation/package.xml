@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mantis_navigation</name>
+  <version>1.1.0</version>
+  <description>The mantis_navigation package</description>
+
+
+  <maintainer email="21bme012@nith.ac.in">Aakash</maintainer>
+  <license>BSDv3</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>amcl</build_depend>
+  <build_depend>mantis_bringup</build_depend>
+  <build_depend>map_server</build_depend>
+  <build_depend>move_base</build_depend>
+  <build_export_depend>amcl</build_export_depend>
+  <build_export_depend>mantis_bringup</build_export_depend>
+  <build_export_depend>map_server</build_export_depend>
+  <build_export_depend>move_base</build_export_depend>
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>mantis_bringup</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>base_local_planner</exec_depend>
+  <exec_depend>dwa_local_planner</exec_depend>
+
+
+  <export>
+
+  </export>
+</package>

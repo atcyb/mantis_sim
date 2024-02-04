@@ -1,0 +1,16 @@
+<launch>
+    
+    <arg name="model" default="mantis" doc="model type [mantis, mantis]"/>
+    <rosparam command="load"
+        file="$(find mantis_control)/config/mantis_control.yaml"/>
+
+    <rosparam command="load"
+        file="$(find mantis_control)/config/pid.yaml"/>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+        output="screen" ns="mantis" args="joint_state_controller mobile_base_controller"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" ns="mantis" respawn="false" output="screen">
+        <remap from="/joint_states" to="/mantis/joint_states" />
+    </node>
+
+</launch>

@@ -1,0 +1,17 @@
+<launch>
+    <arg name="laser_frame_id" default="rplidar_laser_link" />
+    <arg name="model" default="mantis" doc="model type [mantis, mantis]"/>
+    <include file="$(find mantis_bringup)/launch/minimal.launch">
+        <arg name="model" value="$(arg model)" />
+    </include>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        output="screen" ns="mantis" />
+
+    <include file="$(find mantis_bringup)/launch/rplidar.launch" ns="mantis">
+        <arg name="laser_frame_id" value="$(arg laser_frame_id)" />
+    </include>
+
+</launch>
+
+
