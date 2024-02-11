@@ -5,12 +5,12 @@
   <!--arg name="model" default="$(env mantis_MODEL)" doc="model type [mantis, mantis]"/-->
   <arg name="model" default="mantis" doc="model type [mantis, mantis]"/>
 
-  <arg name="map_file" default="$(find mantis_navigation)/maps/db_world.yaml"/>
+  <arg name="map_file" default="$(find mantis_navigation)/maps/turtlebot3_world.yaml"/>
   <arg name="open_rviz" default="true"/>
   <arg name="rvizconfig" default="$(find mantis_navigation)/rviz/mantis_navigation.rviz" />
   <arg name="move_forward_only" default="false"/>
   <arg name="local_planner" default="dwa" doc="Local planner can be either dwa, base, teb or pose"/>
-  <arg name="world_name" default="$(find mantis_gazebo)/worlds/db_world.world"/>
+  <arg name="world_name" default="$(find mantis_gazebo)/worlds/turtlebot3_world.world"/>
 
   <!-- mantis mantiste Steering TODO -->
   <!--include file="$(find mantis_bringup)/launch/mantis_mantiste.launch">
